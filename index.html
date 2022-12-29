@@ -7,15 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <div class="all">
-          <button class="counter-plus">+</button>
-  
-          <h1 class="counter-display"></h1>
-  
-         <button class="counter-minus">-</button>
-        </div>
-      </div>
+    <input id="num1"/>
+    <div id="operator_btns">
+        <button id="Plus" class="operator" onclick="op='+'">+</button>
+        <button id="minus" class="operator" onclick="op='-'">-</button>
+        <button id="times" class="operator" onclick="op='x'">x</button>
+        <button id="devide" class="operator" onclick="op='/'">:</button>
+    </div>
+    <input id="num2"/>
+    <button onclick = "func()">Посчитать...</button>
+
+    <p id="result"></p>
+
 </body>
 <script src="app.js"></script>
 </html>

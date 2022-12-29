@@ -1,19 +1,28 @@
-const counterDisplayElem = document.querySelector(".counter-display");
-const counterMinusElem = document.querySelector(".counter-minus");
-const counterPlusElem = document.querySelector(".counter-plus");
+var op;
+function func() {
+    var result;
+    var num1 = Number(document.getElementById("num1")).value;
+    var num2 = Number(document.getElementById("num2")).value;
+    switch (op) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2) {
+              result = num1 / num2;
+            } else {
+              result = 'бесконечность';
+            }
+            break;
+            default:
+                result = " ";
 
-let count = 0;
-
-updateDisplay();
-
-counterPlusElem.addEventListener("click", () =>{
-    count++;
-    updateDisplay();
-});
-counterMinusElem.addEventListener("click", () => {
-    count--;
-    updateDisplay();
-});
-function updateDisplay(){
-    counterDisplayElem.innerHTML=count;
+    }
+    document.getElementById("result").innerHTML = result;
 }
