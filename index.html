@@ -7,18 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <input id="num1"/>
-    <div id="operator_btns">
-        <button id="Plus" class="operator" onclick="op='+'">+</button>
-        <button id="minus" class="operator" onclick="op='-'">-</button>
-        <button id="times" class="operator" onclick="op='x'">x</button>
-        <button id="devide" class="operator" onclick="op='/'">:</button>
-    </div>
-    <input id="num2"/>
-    <button onclick = "func()">Посчитать...</button>
-
-    <p id="result"></p>
-
+    <div class="calc">
+        <input id="num1" value="" />
+        <button class="plus" onclick="nm='+'">+</button>
+        <button class="minus" onclick="nm='-'">-</button>
+        <button class="times" onclick="nm='*'">x</button>
+        <button class="degree" onclick="nm='/'">:</button>
+        <input id="num2" />
+        <button class="ravno" onclick="ravno()">=</button>
+        <p id="result"></p>
+      </div>
 </body>
 <script src="app.js"></script>
 </html>
